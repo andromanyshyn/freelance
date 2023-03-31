@@ -26,7 +26,7 @@ def get_data(url):
             )
 
             with open('vidal.csv', 'w', encoding='utf-8') as file:
-                writer = csv.writer(file, delimiter='|')
+                writer = csv.writer(file)
                 writer.writerow(['Название русское', 'Название на латыни'])
                 for line in list(zip_words):
                     writer.writerow(line)
@@ -41,7 +41,7 @@ def get_data(url):
             )
 
             with open('vidal.csv', 'a', encoding='utf-8') as file:
-                writer = csv.writer(file, delimiter='|')
+                writer = csv.writer(file)
                 for line in list(zip_words):
                     writer.writerow(line)
 
